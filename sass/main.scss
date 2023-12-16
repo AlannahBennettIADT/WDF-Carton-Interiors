@@ -1,0 +1,228 @@
+//import functions
+@import "../node_modules/bootstrap/scss/functions";
+$enable-negative-margins:true;
+$enable-rounded:true;
+//Custom Styling
+
+//colours
+
+$primary: #5E0038;
+$secondary: #D47E5C;
+$light: #F3F0EB;
+
+//variables and mixins
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/mixins";
+
+//custom colours
+$custom-colors:(
+    "secondary-light": #C9C8C9,
+);
+
+
+$theme-colors: map-merge($theme-colors,$custom-colors);
+
+// .navbar{
+//   backdrop-filter: blur(5px); /* Initial blur value for the navbar */
+//   transition: backdrop-filter 0.1s ease;// Adjust this value for the desired blur height
+// }
+//Header carousel styling
+
+#carouselExampleIndicators.custom-carousel {
+  width: 100%;
+  height: 600px; 
+
+  @media (min-width: 768px) {
+    height: 500px; 
+  }
+
+  @media (min-width: 992px) {
+    height: 700px; 
+  }
+
+  position: relative;
+
+  .carousel-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    .carousel-item {
+      position: relative;
+      width: 100%;
+      height: 100%;
+
+      img, video{
+        width: 100%;
+        height: 100%;
+        object-fit: cover; 
+      }
+    }
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 80px; 
+      backdrop-filter: blur(5px); 
+      transition: backdrop-filter 0.3s ease;
+      z-index: 1;
+    }
+  }
+}
+
+
+
+//changing line height
+$custom-line-height: 2;
+
+* {
+  line-height: $custom-line-height; 
+}
+
+
+// green layer
+.custom-bg {
+  background-image: url(../images/greensm.png);
+  background-size: cover;
+  background-position: center;
+  color: #ffffff;
+}
+
+
+@media (min-width: 768px) {
+  .custom-bg {
+    background-image: url(../images/green2.png);
+  }
+}
+
+
+// before and after
+.beforeafter-bg {
+  background-image: url(../images/ba.png);
+  background-size: cover;
+  background-position: center;
+  color: #ffffff;
+}
+
+
+.process-bg {
+  background-image: url(../images/Carton-Interiors-TH_H-791x1024.jpg);
+  background-size: cover;
+  background-position: center;
+  color: #ffffff;
+}
+
+
+.max-height-100 {
+  max-height: 80%;
+}
+
+
+.p-card {
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  & img.card-img-top {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 0;
+    transition: filter 0.3s ease-in-out;
+  }
+
+  &:hover::before {
+    opacity: 1;
+  }
+
+
+  .card-img-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+  }
+}
+
+.project-vid {
+  height: 200px;
+
+  @media (min-width: 768px) {
+    height: 300px; /* Adjust the height for larger screens */
+  }
+
+  @media (min-width: 992px) {
+    height: 400px; /* Adjust the height for larger screens */
+  }
+}
+
+.project-vid video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Maintain aspect ratio and cover the container */
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+hr.border.border-1 {
+  border-color: black ;
+  opacity: 1 !important;
+}
+.custom-heading {
+  font-size: 32px;
+  color: $primary; /* Bootstrap primary color */
+  margin-bottom: 20px;
+}
+
+/* Optional: Add additional styling to make the heading stand out */
+.custom-heading::after {
+  content: "";
+  display: block;
+  height: 2px;
+  background-color: $secondary;
+  width: 50px;
+  margin-top: 8px;
+}
+
+.card-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px; /* Increase the gap between cards */
+}
+
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+
+
+//importing google fonts
+@import url("https://fonts.googleapis.com/css2?family=Sacramento&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+
+//* applying to all
+* {
+  font-family: 'Raleway', sans-serif;
+}
+// handwritten font class
+ .handwritten{
+  font-family: 'Sacramento', cursive;
+}
