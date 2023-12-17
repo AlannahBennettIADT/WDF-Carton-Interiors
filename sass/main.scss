@@ -168,18 +168,18 @@ $custom-line-height: 2;
   height: 200px;
 
   @media (min-width: 768px) {
-    height: 300px; /* Adjust the height for larger screens */
+    height: 300px; 
   }
 
   @media (min-width: 992px) {
-    height: 400px; /* Adjust the height for larger screens */
+    height: 400px; 
   }
 }
 
 .project-vid video {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Maintain aspect ratio and cover the container */
+  object-fit: cover; 
   position: absolute;
   top: 0;
   left: 0;
@@ -191,11 +191,11 @@ hr.border.border-1 {
 }
 .custom-heading {
   font-size: 32px;
-  color: $primary; /* Bootstrap primary color */
+  color: $primary; 
   margin-bottom: 20px;
 }
 
-/* Optional: Add additional styling to make the heading stand out */
+
 .custom-heading::after {
   content: "";
   display: block;
@@ -210,6 +210,72 @@ hr.border.border-1 {
   flex-wrap: wrap;
   gap: 10px; /* Increase the gap between cards */
 }
+
+
+
+
+.container-fluid.beforeafter-bg {
+  // Additional styles for the container if needed
+
+  .btn-custom {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    &.btn-sm {
+      font-size: 0.875rem;
+    }
+
+    &.rounded-pill {
+      border-radius: 20px;
+    }
+
+    &.text-uppercase {
+      text-transform: uppercase;
+    }
+
+    &.fw-semi-bold {
+      font-weight: 600;
+    }
+
+    padding: 0.75rem 1.25rem;
+    margin: 0.5rem;
+
+
+
+    .material-symbols-outlined {
+      font-size: 1.5em;
+      margin-right: 0.5rem;
+    }
+  }
+
+  // Apply the custom styles to your buttons
+  .btn-custom.button1 {
+    @extend .btn-custom;
+  }
+
+  .btn-custom.button2 {
+    @extend .btn-custom;
+  }
+
+  .btn-custom.button3 {
+    @extend .btn-custom;
+  }
+}
+
+// Apply the custom styles to your buttons
+.button1 {
+  @extend .btn-custom;
+}
+
+.button2 {
+  @extend .btn-custom;
+}
+
+.button3 {
+  @extend .btn-custom;
+}
+
 
 @import "../node_modules/bootstrap/scss/bootstrap.scss";
 
